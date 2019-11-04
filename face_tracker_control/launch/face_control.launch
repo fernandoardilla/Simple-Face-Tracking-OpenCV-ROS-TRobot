@@ -1,0 +1,14 @@
+
+<!-- This will open USB To Dynamixel controller and search for servos -->
+<launch>
+    <node name="face_tracker_controller" pkg="face_tracker_control" type="face_tracker_controller"/>
+   
+    
+
+<!-- This will launch the Dynamixel pan controller -->
+
+   <include file="$(find trobot)/launch/trd_s_trobot.launch"/> -->
+
+
+</launch>
+
