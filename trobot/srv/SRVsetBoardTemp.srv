@@ -1,0 +1,4 @@
+# 基板温度(L-MESのみのみ)SET
+float64 BoardTemp
+---
+

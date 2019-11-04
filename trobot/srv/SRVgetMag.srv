@@ -1,0 +1,6 @@
+# 9D磁気センサGET
+---
+float64 magX
+float64 magY
+float64 magZ
+

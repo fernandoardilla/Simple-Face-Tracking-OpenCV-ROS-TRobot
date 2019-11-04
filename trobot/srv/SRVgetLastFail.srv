@@ -1,0 +1,7 @@
+# エラーステータス(SCIBOT-X、L-MESのみ)GET
+---
+uint8  LastFailD
+uint8  LastFailC
+uint8  LastFailN
+uint8  LastFailE
+

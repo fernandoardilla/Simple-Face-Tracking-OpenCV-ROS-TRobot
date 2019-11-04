@@ -1,0 +1,12 @@
+# バッテリ状態(SCIBOT-X、L-MESのみ)
+# L-MES:BatteryLevel1に使用バッテリー残量、BatteryLevel2に未使用バッテリー残量。あとは未使用。
+#SET
+uint8  BatteryStat
+uint8  BatteryComStat
+uint8  ErrDetectStat
+float64 BatteryLevel1
+float64 BatteryLevel2
+float64 BatteryTemp1
+float64 BatteryTemp2
+---
+

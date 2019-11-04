@@ -1,0 +1,6 @@
+# 9DジャイロセンサSET
+float64 gyrX
+float64 gyrY
+float64 gyrZ
+---
+

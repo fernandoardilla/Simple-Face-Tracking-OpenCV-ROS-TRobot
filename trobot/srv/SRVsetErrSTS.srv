@@ -1,0 +1,7 @@
+# エラーステータス(旧ロボットベースのみ)SET
+uint8 adc
+uint8 com
+uint8 i2c0
+uint8 i2c1
+---
+

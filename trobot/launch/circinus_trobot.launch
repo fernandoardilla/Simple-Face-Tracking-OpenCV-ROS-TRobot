@@ -1,0 +1,79 @@
+<!--                                         -->
+<!--     ロボットベースI/F launch ファイル   -->
+<!--     TRD-S                               -->
+<!--                                         -->
+<launch>
+     <node pkg="tf" type="static_transform_publisher" name="map_odom"                  args="  0.0  0.0  0.0  0.0    0 0 map odom 500" />
+     <node pkg="tf" type="static_transform_publisher" name="base_footprint_base_link"  args="  0.0  0.0  0.0  0.0    0 0 base_footprint base_link 500" />
+
+     <node pkg="trobot" type="trobot_node" name="trobot_node">
+       <param name="trobotVersion"        value="CIRCINUS" />
+       <param name="activeConfig"         value="CIRCINUS" />
+       <param name="serialPortName"       value="/dev/ttyACM0" />
+       <param name="wheelRadius"          value="0.075" />
+       <param name="axleTrack"            value="0.40" />
+       <param name="axleTrackFR"          value="0.40" />
+       <param name="rotEncoderResolution" value="800" />
+       <param name="wheelGearRatio"       value="15" />
+       <param name="coeffRpsToCmd"        value="17.28" />    <!-- wheelRadius * 32/(最大速度=1km/h) * (60.0 * 60.0) / 1000.0 -->
+       <param name="velAccelMax"          value="4" />
+       <param name="velDecelMax"          value="4" />
+       <param name="autoRecovery"         value="AUTO" />
+       <param name="FrameRate"            value="16" />
+       <param name="publish_tf"           value="true" />
+       <param name="odom_frame"           value="odom" />
+       <param name="base_frame"           value="base_footprint" />
+
+
+       <param name="coeffVxCmd"          value="1.0" />
+       <param name="coeffVaCmd"          value="1.0" />
+       <param name="coeffXOdo"           value="1.0" />
+       <param name="coeffYOdo"           value="1.0" />
+       <param name="coeffHeadingOdo"     value="1.0" />
+       <param name="coeffHeadingOdoAdd"  value="0.0" />
+
+       <param name="trace_log"           value="false" />
+
+       <remap from="cmd_vel" to="cmd_vel" />
+     </node>
+</launch>
+
+<!--                                                                           -->
+<!-- パラメータ説明                                                            -->
+<!--                                                                           -->
+<!-- trobotVersion         : ロボットバージョン                                -->
+<!--    (旧伝送フォーマット："OLDrobot",新伝送フォーマット："SCIBOT-X"）       -->
+<!-- activeConfig          : システム名                                        -->
+<!--    (ログ出力によりConfiguration SET確認用)                                -->
+<!-- serialPortName        : シリアルポートの名称                              -->
+<!--   （Linux: /dev/ttyUSB0, etc.,  Windows: COM3, etc.）                     -->
+<!-- wheelRadius           : 駆動輪の半径 [m]                                  -->
+<!-- axleTrack             : 輪距（左右の駆動輪中心間の距離） [m]              -->
+<!-- axleTrackFR           : 輪距（前後の駆動輪中心間の距離） [m]（メカナム時）-->
+<!-- rotEncoderResolution  : 駆動輪モータ軸のエンコーダの分解能 [pulses/rev]   -->
+<!-- wheelGearRatio        : 駆動輪の減速機の減速比 [無単位]                   -->
+<!-- coeffRpsToCmd : 角速度 [rad/s] から回転速度指令値への変換係数             -->
+<!--     KMPH_TO_CMD : I/F仕様書の速度指令値の最大値/最大値の時の時速          -->
+<!--     KMPH_TO_MPS : エンコーダカウント値のサンプリング周期                  -->
+<!--         = (60.0 * 60.0) / 1000.0                                          -->
+<!--     m_wheelRadius * KMPH_TO_CMD * KMPH_TO_MPS                             -->
+<!-- アライメント調整                                                          -->
+<!-- coeffVxCmd            : 指令値進行方向速度(vx)にかける係数                -->
+<!-- coeffVyCmd            : 指令値進行方向直角左向き速度(vy)にかける係数      -->
+<!-- coeffvaCmd            : 指令値車体角速度(va)にかける係数                  -->
+<!-- coeffXOdo             : オドメトリX座標増分にかける係数                   -->
+<!-- coeffYOdo             : オドメトリY座標増分にかける係数                   -->
+<!-- coeffHeadingOdo       : オドメトリ向き増分にかける係数                    -->
+<!-- coeffHeadingOdoAdd    : オドメトリ向き増分に足しこむ係数                  -->
+<!--                                                                           -->
+<!-- 1指令周期毎の加速度制限(前回指令値からの速度差分制限)                     -->
+<!-- velAccelMax           : 加速度制限                                        -->
+<!-- velDecelMax           : 減速度制限                                        -->
+<!--                                                                           -->
+<!-- autoRecovery          : 緊急停止モードで要因が復旧した時に                -->
+<!--                         自動で復旧処理を行う                              -->
+<!--                        （ "MANUAL"(default):手動でモード遷移させる、      -->
+<!--                           "AUTO"：自動で運転モードに遷移する ）           -->
+<!--                                                                           -->
+<!-- trace_log             : トレースログ出力フラグ（true:トレースログ出力）   -->
+<!--                                                                           -->

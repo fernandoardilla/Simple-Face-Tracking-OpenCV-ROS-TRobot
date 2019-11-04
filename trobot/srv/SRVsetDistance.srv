@@ -1,0 +1,7 @@
+# 測距センサ(SCIBOT-X、L-MESのみ)SET
+float64 Distance0
+float64 Distance1
+float64 Distance2
+float64 Distance3
+---
+

@@ -1,0 +1,23 @@
+# メンテナンス情報(SCIBOT-X、L-MESのみ)
+# NoFloorSMount:L-MESで未使用 BumperSMount:L-MESで未使用 DistanceSMount2:SCIBOT-Xで未使用
+# UltraSonicSMount:SCIBOT-Xで未使用 ResetCount:SCIBOT-Xで未使用
+# NineDOFSMount:L-MESで未使用 JudgSensor:L-MESで未使用
+#SET
+uint32 OperatingTime
+uint8 FailD
+uint8 FailC
+uint8 FailN
+uint8 FailE
+uint8 FailWDT
+uint8 FailRAMSoft
+uint8 NoFloorSMount
+uint8 BumperSMount
+uint8 DistanceSMount
+uint8 DistanceSMount2
+uint8 UltraSonicSMount
+uint8 ResetCount
+uint32 TravelDistance
+uint8 NineDOFSMount
+uint8 JudgSensor
+---
+

@@ -1,0 +1,4 @@
+# 現在の運転状態GET
+---
+uint32 robotStat
+

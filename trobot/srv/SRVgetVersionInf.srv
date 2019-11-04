@@ -1,0 +1,13 @@
+# バージョン情報(SCIBOT-X、L-MESのみ)
+#GET
+---
+uint8 ModelRevision
+uint8 HardwareRevision
+uint8 FirmwareRevision
+uint32 SerialNumber
+uint8 CreationYear
+uint8 CreationMonth
+uint8 CreationDay
+uint8 CreationHour
+uint8 CreationMinute
+

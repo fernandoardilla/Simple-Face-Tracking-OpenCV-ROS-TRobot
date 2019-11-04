@@ -1,0 +1,77 @@
+echo -e "# ロボットバージョンの名称SET\nstring name\n---\n" > SRVsetRobotVersionName.srv
+echo -e "# ロボットバージョンの名称GET\n---\nstring name\n" > SRVgetRobotVersionName.srv
+
+echo -e "# 強制速度更新SET\nuint32 Flg\nfloat64 Vx\nfloat64 Vy\nfloat64 Va\n---\n" > SRVsetForcedVel.srv
+echo -e "# 強制速度更新GET\n---\nuint32 Flg\nfloat64 Vx\nfloat64 Vy\nfloat64 Va\n" > SRVgetForcedVel.srv
+
+echo -e "# バッテリ電圧SET\nfloat64 value\n---\n" > SRVsetBatteryVoltage.srv
+echo -e "# バッテリ電圧GET\n---\nfloat64 value\n" > SRVgetBatteryVoltage.srv
+
+echo -e "# ダイ温度(旧ロボットベース、SCIBOT-Xのみ)SET\nfloat64 value\n---\n" > SRVsetDaiTemp.srv
+echo -e "# ダイ温度(旧ロボットベース、SCIBOT-Xのみ)GET\n---\nfloat64  value\n" > SRVgetDaiTemp.srv
+
+echo -e "# エラーステータス(旧ロボットベースのみ)SET\nuint8 adc\nuint8 com\nuint8 i2c0\nuint8 i2c1\n---\n" > SRVsetErrSTS.srv
+echo -e "# エラーステータス(旧ロボットベースのみ)GET\n---\nuint8  adc\nuint8  com\nuint8  i2c0\nuint8  i2c1\n" > SRVgetErrSTS.srv
+
+echo -e "# エラーステータス(SCIBOT-X、L-MESのみ)SET\nuint8 LastFailD\nuint8 LastFailC\nuint8 LastFailN\nuint8 LastFailE\n---\n" > SRVsetLastFail.srv
+echo -e "# エラーステータス(SCIBOT-X、L-MESのみ)GET\n---\nuint8  LastFailD\nuint8  LastFailC\nuint8  LastFailN\nuint8  LastFailE\n" >SRVgetLastFail.srv
+
+echo -e "# 9D加速度センサSET\nfloat64 accX\nfloat64 accY\nfloat64 accZ\n---\n" > SRVsetAcc.srv
+echo -e "# 9D加速度センサGET\n---\nfloat64 accX\nfloat64 accY\nfloat64 accZ\n" > SRVgetAcc.srv
+
+echo -e "# 9DジャイロセンサSET\nfloat64 gyrX\nfloat64 gyrY\nfloat64 gyrZ\n---\n" > SRVsetGyr.srv
+echo -e "# 9DジャイロセンサGET\n---\nfloat64 gyrX\nfloat64 gyrY\nfloat64 gyrZ\n" > SRVgetGyr.srv
+
+echo -e "# 9D磁気センサSET\nfloat64 magX\nfloat64 magY\nfloat64 magZ\n---\n" > SRVsetMag.srv
+echo -e "# 9D磁気センサGET\n---\nfloat64 magX\nfloat64 magY\nfloat64 magZ\n" > SRVgetMag.srv
+
+echo -e "# 床なしセンサ(SCIBOT-Xのみ)SET\nuint32 NoFloor1\nuint32 NoFloor2\nuint32 NoFloor3\nuint32 NoFloor4\n---\n" > SRVsetNoFloor.srv
+echo -e "# 床なしセンサ(SCIBOT-Xのみ)GET\n---\nuint32 NoFloor1\nuint32 NoFloor2\nuint32 NoFloor3\nuint32 NoFloor4\n" > SRVgetNoFloor.srv
+
+echo -e "# バンパセンサ(SCIBOT-Xのみ)SET\nuint32 Bumper1\nuint32 Bumper2\nuint32 Bumper3\nuint32 Bumper4\n---\n" > SRVsetBumper.srv
+echo -e "# バンパセンサ(SCIBOT-Xのみ)GET\n---\nuint32 Bumper1\nuint32 Bumper2\nuint32 Bumper3\nuint32 Bumper4\n" > SRVgetBumper.srv
+
+
+echo -e "# 測距センサ(SCIBOT-X、L-MESのみ)SET\nfloat64 Distance0\nfloat64 Distance1\nfloat64 Distance2\nfloat64 Distance3\n---\n" > SRVsetDistance.srv
+echo -e "# 測距センサ(SCIBOT-X、L-MESのみ)GET\n---\nfloat64 Distance0\nfloat64 Distance1\nfloat64 Distance2\nfloat64 Distance3\n" > SRVgetDistance.srv
+
+
+echo -e "# 測距センサ２(L-MESのみのみ)SET\nfloat64 Distance4\nfloat64 Distance5\nfloat64 Distance6\nfloat64 Distance7\n---\n" > SRVsetDistance2.srv
+echo -e "# 測距センサ２(L-MESのみのみ)GET\n---\nfloat64 Distance4\nfloat64 Distance5\nfloat64 Distance6\nfloat64 Distance7\n" > SRVgetDistance2.srv
+
+echo -e "# 超音波センサ(L-MESのみのみ)SET\nfloat64 UltraSonic0\nfloat64 UltraSonic1\n---\n" > SRVsetUltraSonic.srv
+echo -e "# 超音波センサ(L-MESのみのみ)GET\n---\nfloat64 UltraSonic0\nfloat64 UltraSonic1\n" > SRVgetUltraSonic.srv
+
+echo -e "# 基板温度(L-MESのみのみ)SET\nfloat64 BoardTemp\n---\n" > SRVsetBoardTemp.srv
+echo -e "# 基板温度(L-MESのみのみ)GET\n---\nfloat64 BoardTemp\n" > SRVgetBoardTemp.srv
+
+echo -e "# バッテリ状態(SCIBOT-X、L-MESのみ)\n# L-MES:BatteryLevel1に使用バッテリー残量、BatteryLevel2に未使用バッテリー残量。あとは未使用。\n#SET\nuint8  BatteryStat\nuint8  BatteryComStat\nuint8  ErrDetectStat\nfloat64 BatteryLevel1  float64 BatteryLevel2\nfloat64 BatteryTemp1\nfloat64 BatteryTemp2\n---\n" > SRVsetBatteryStat.srv
+echo -e "# バッテリ状態(SCIBOT-X、L-MESのみ)\n# L-MES:BatteryLevel1に使用バッテリー残量、BatteryLevel2に未使用バッテリー残量。あとは未使用。\n#GET\n---\nuint8  BatteryStat\nuint8  BatteryComStat\nuint8  ErrDetectStat\nfloat64 BatteryLevel1\nfloat64 BatteryLevel2\nfloat64 BatteryTemp1\nfloat64 BatteryTemp2\n" > SRVgetBatteryStat.srv
+
+echo -e "# 速度情報(SCIBOT-Xのみ)SET\nfloat64 rightVelCtl\nfloat64 leftVelCtl\nfloat64 rightVel\nfloat64 leftVel\nfloat64 rightCurrent\nfloat64 leftCurrent\n---\n" > SRVsetVelInf.srv
+echo -e "# 速度情報(SCIBOT-Xのみ)\n#GET\n---\nfloat64 rightVelCtl\nfloat64 leftVelCtl\nfloat64 rightVel\nfloat64 leftVel\nfloat64 rightCurrent\nfloat64 leftCurrent\n" > SRVgetVelInf.srv
+
+echo -e "# バージョン情報(SCIBOT-X、L-MESのみ)SET\nuint8 ModelRevision\nuint8 HardwareRevision\nuint8 FirmwareRevision\nuint32 SerialNumber\nuint8 CreationYear\nuint8 CreationMonth\nuint8 CreationDay\nuint8 CreationHour\nuint8 CreationMinute\n---\n" > SRVsetVersionInf.srv
+echo -e "# バージョン情報(SCIBOT-X、L-MESのみ)\n#GET\n---\nuint8 ModelRevision\nuint8 HardwareRevision\nuint8 FirmwareRevision\nuint32 SerialNumber\nuint8 CreationYear\nuint8 CreationMonth\nuint8 CreationDay\nuint8 CreationHour\nuint8 CreationMinute\n" > SRVgetVersionInf.srv
+
+echo -e "# メンテナンス情報(SCIBOT-X、L-MESのみ)\n# NoFloorSMount:L-MESで未使用 BumperSMount:L-MESで未使用 DistanceSMount2:SCIBOT-Xで未使用\n# UltraSonicSMount:SCIBOT-Xで未使用 ResetCount:SCIBOT-Xで未使用\n# NineDOFSMount:L-MESで未使用 JudgSensor:L-MESで未使用\n#SET\nuint32 OperatingTime\nuint8 FailD\nuint8 FailC\nuint8 FailN\nuint8 FailE\nuint8 FailWDT\nuint8 FailRAMSoft\nuint8 NoFloorSMount\nuint8 BumperSMount\nuint8 DistanceSMount\nuint8 DistanceSMount2\nuint8 UltraSonicSMount\nuint8 ResetCount\nuint32 TravelDistance\nuint8 NineDOFSMount\nuint8 JudgSensor\n---\n" > SRVsetMntInf.srv
+echo -e "# メンテナンス情報(SCIBOT-X、L-MESのみ)\n# NoFloorSMount:L-MESで未使用 BumperSMount:L-MESで未使用 DistanceSMount2:SCIBOT-Xで未使用\n# UltraSonicSMount:SCIBOT-Xで未使用 ResetCount:SCIBOT-Xで未使用\n# NineDOFSMount:L-MESで未使用 JudgSensor:L-MESで未使用\n#GET\n---\nuint32 OperatingTime\nuint8 FailD\nuint8 FailC\nuint8 FailN\nuint8 FailE\nuint8 FailWDT\nuint8 FailRAMSoft\nuint8 NoFloorSMount\nuint8 BumperSMount\nuint8 DistanceSMount\nuint8 DistanceSMount2\nuint8 UltraSonicSMount\nuint8 ResetCount\nuint32 TravelDistance\nuint8 NineDOFSMount\nuint8 JudgSensor\n" > SRVgetMntInf.srv
+
+echo -e "# 現在の運転状態SET\nuint32 robotStat\n---\n" > SRVsetRobotStat.srv
+echo -e "# 現在の運転状態GET\n---\nuint32 robotStat\n" > SRVgetRobotStat.srv
+
+echo -e "# 運転モードに移行(SCIBOT-Xのみ)\n---\n" > SRVCmdSetDrive.srv
+echo -e "# 待機モードに移行(SCIBOT-Xのみ)\n---\n" > SRVCmdSetIdle.srv
+echo -e "# 緊急停止モードに移行(SCIBOT-Xのみ)\n---\n" > SRVCmdErrStop.srv
+echo -e "# 緊急停止モードから待機モードに移行(SCIBOT-Xのみ)\n---\n" > SRVCmdRecovery.srv
+echo -e "# 現在のモードを取得する(SCIBOT-Xのみ)\n---\n" > SRVCmdGetMode.srv
+echo -e "# 現在の情報を取得する(SCIBOT-Xのみ)\n---\n" > SRVCmdGetInf.srv
+echo -e "# 運転モードに移行(L-MESのみ)\n---\n" > SRVCmdSetDriveLM.srv
+echo -e "# 待機モードに移行(L-MESのみ)\n---\n" > SRVCmdSetIdleLM.srv
+echo -e "# 緊急停止モードに移行(L-MESのみ)\n---\n" > SRVCmdErrStopLM.srv
+echo -e "# 緊急停止システムの自己診断を要求(L-MESのみ)\n---\n" > SRVCmdDIAGLM.srv
+echo -e "# 緊急停止モードから待機モードに移行(L-MESのみ)\n---\n" > SRVCmdRecoveryLM.srv
+echo -e "# ロボットベースを再起動させる(L-MESのみ)\n---\n" > SRVCmdRebootLM.srv
+echo -e "# 省電力モードに移行する(L-MESのみ)\n---\n" > SRVCmdSuspendLM.srv
+echo -e "# エラー、軽故障データクリア(L-MESのみ)\n---\n" > SRVCmdErrClearLM.srv
+

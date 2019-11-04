@@ -1,0 +1,7 @@
+# 床なしセンサ(SCIBOT-Xのみ)SET
+uint32 NoFloor1
+uint32 NoFloor2
+uint32 NoFloor3
+uint32 NoFloor4
+---
+

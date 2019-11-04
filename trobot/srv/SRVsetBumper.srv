@@ -1,0 +1,7 @@
+# バンパセンサ(SCIBOT-Xのみ)SET
+uint32 Bumper1
+uint32 Bumper2
+uint32 Bumper3
+uint32 Bumper4
+---
+

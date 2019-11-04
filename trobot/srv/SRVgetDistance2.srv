@@ -1,0 +1,7 @@
+# 測距センサ２(L-MESのみのみ)GET
+---
+float64 Distance4
+float64 Distance5
+float64 Distance6
+float64 Distance7
+

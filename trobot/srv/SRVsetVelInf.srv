@@ -1,0 +1,9 @@
+# 速度情報(SCIBOT-Xのみ)SET
+float64 rightVelCtl
+float64 leftVelCtl
+float64 rightVel
+float64 leftVel
+float64 rightCurrent
+float64 leftCurrent
+---
+

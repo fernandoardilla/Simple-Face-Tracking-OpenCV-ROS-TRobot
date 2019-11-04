@@ -1,0 +1,4 @@
+# 基板温度(L-MESのみのみ)GET
+---
+float64 BoardTemp
+

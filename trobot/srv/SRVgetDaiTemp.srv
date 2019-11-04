@@ -1,0 +1,4 @@
+# ダイ温度(旧ロボットベース、SCIBOT-Xのみ)GET
+---
+float64  value
+

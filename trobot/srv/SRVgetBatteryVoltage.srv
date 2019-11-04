@@ -1,0 +1,4 @@
+# バッテリ電圧GET
+---
+float64 value
+

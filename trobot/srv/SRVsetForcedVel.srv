@@ -1,0 +1,7 @@
+# 強制速度更新SET
+uint32 Flg
+float64 Vx
+float64 Vy
+float64 Va
+---
+
